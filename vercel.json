@@ -1,14 +1,7 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "packages/app-shell/package.json",
-      "use": "@vercel/next",
-      "config": {
-        "distDir": ".next"
-      }
-    }
-  ],
-  "buildCommand": "yarn install && yarn build",
-  "outputDirectory": "packages/app-shell/.next"
+  "buildCommand": "yarn workspace @invertax/app-shell build",
+  "outputDirectory": "packages/app-shell/.next",
+  "installCommand": "yarn install --frozen-lockfile",
+  "framework": "nextjs"
 }
