@@ -1,0 +1,30 @@
+{
+  "name": "invertax-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "lerna run dev --stream --parallel",
+    "build": "lerna run build",
+    "start": "lerna run start --stream --parallel",
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "clean": "lerna run clean && lerna clean -y && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "lerna": "^7.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=1.22.0"
+  },
+  "packageManager": "yarn@3.6.1"
+}
