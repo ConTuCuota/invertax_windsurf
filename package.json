@@ -2,6 +2,7 @@
   "name": "invertax-windsurf",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "workspaces": [
     "packages/*"
   ],
@@ -9,9 +10,15 @@
     "dev": "lerna run dev --stream --parallel",
     "build": "lerna run build",
     "start": "lerna run start --stream --parallel",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "clean": "lerna run clean && lerna clean -y && rm -rf node_modules"
   },
   "devDependencies": {
     "lerna": "^6.0.0"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=1.22.0"
+  },
+  "packageManager": "yarn@3.6.1"
 }
